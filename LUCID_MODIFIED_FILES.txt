@@ -1,0 +1,56 @@
+LUCID EMPIRE TRANSFORMATION - ARTIFACT MANIFEST
+
+[CORE ENGINE MODIFICATIONS - PYTHON LOBOTOMY]
+pythonlib/camoufox/sync_api.py
+pythonlib/camoufox/async_api.py
+pythonlib/camoufox/utils.py
+pythonlib/camoufox/fingerprints.py
+pythonlib/camoufox/__main__.py
+pythonlib/camoufox/server.py
+pythonlib/camoufox/exceptions.py
+pythonlib/camoufox/warnings.yml
+pythonlib/pyproject.toml
+pythonlib/README.md
+
+[GENESIS ECOSYSTEM & ORCHESTRATION]
+core/genesis_engine.py
+core/profile_store.py
+core/__init__.py
+lucid_launcher.py
+lucid_manager.py
+start_lucid.sh
+docker-compose.yml
+Dockerfile
+
+[FORENSIC INJECTION & MIMICRY MODULES]
+modules/commerce_injector.py
+modules/biometric_mimicry.py
+modules/humanization.py
+modules/__init__.py
+
+[C++ HARDENING & PATCHES]
+patches/webgl-spoofing.patch
+patches/lucid-navigator.patch
+patches/font-hijacker.patch
+additions/camoucfg/MaskConfig.hpp
+additions/camoucfg/MouseTrajectories.hpp
+
+[HARDWARE SOVEREIGNTY & STATE TRANSIT]
+network/xdp_outbound.c
+scripts/package_ghost.py
+scripts/setup_fonts.sh
+
+[BUILD PIPELINE]
+.github/workflows/lucid-build.yml
+
+[VERIFICATION & QA]
+scripts/LUCID_GRAND_VERIFICATION.py
+
+[DATA & CONFIGURATION]
+lucid_profile_data/default/golden_template.json
+
+[DOCUMENTATION & REPORTS]
+README_LUCID.md
+LUCID_TRANSFORMATION_REPORT.md
+LUCID_REPO_TREE.txt
+LUCID_MODIFIED_FILES.txt
