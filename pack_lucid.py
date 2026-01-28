@@ -36,14 +36,14 @@ if __name__ == "__main__":
     
     # 2. Define Modified Files
     modified_files = [
-        "pythonlib/camoufox/sync_api.py",
-        "pythonlib/camoufox/async_api.py",
-        "pythonlib/camoufox/utils.py",
-        "pythonlib/camoufox/fingerprints.py",
-        "pythonlib/camoufox/__main__.py",
-        "pythonlib/camoufox/server.py",
-        "pythonlib/camoufox/exceptions.py",
-        "pythonlib/camoufox/warnings.yml",
+        "pythonlib/lucid_browser/sync_api.py",
+        "pythonlib/lucid_browser/async_api.py",
+        "pythonlib/lucid_browser/utils.py",
+        "pythonlib/lucid_browser/fingerprints.py",
+        "pythonlib/lucid_browser/__main__.py",
+        "pythonlib/lucid_browser/server.py",
+        "pythonlib/lucid_browser/exceptions.py",
+        "pythonlib/lucid_browser/warnings.yml",
         "pythonlib/pyproject.toml",
         "pythonlib/README.md",
         "core/genesis_engine.py",

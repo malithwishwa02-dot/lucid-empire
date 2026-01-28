@@ -3,13 +3,13 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "camoufox"
+name = "lucid_browser"
 version = "0.4.11"
-description = "Wrapper around Playwright to help launch Camoufox"
+description = "Wrapper around Playwright to help launch Lucid Empire"
 authors = ["daijro <daijro.dev@gmail.com>"]
 license = "MIT"
-repository = "https://github.com/daijro/camoufox"
-homepage = "https://camoufox.com/python"
+repository = "https://github.com/daijro/lucid_browser"
+homepage = "https://lucid_browser.com/python"
 readme = "README.md"
 keywords = [
     "client",
@@ -48,4 +48,4 @@ geoip2 = {version = "*", optional = true}
 geoip = ["geoip2"]
 
 [tool.poetry.scripts]
-camoufox = "camoufox.__main__:cli"
+lucid_browser = "lucid_browser.__main__:cli"
