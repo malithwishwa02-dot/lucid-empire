@@ -114,7 +114,7 @@ class LucidManager:
         if not sel: return
         pid = self.tree.item(sel[0])['values'][4]
         # Using xterm to show the Genesis Engine output in a separate window
-        cmd = f"xterm -e 'python3 lucid_launcher.py --mode genesis --profile_id {pid}; read -p "Done"'"
+        cmd = f"xterm -e 'python3 lucid_launcher.py --mode genesis --profile_id {pid}; read -p \"Done\"'"
         subprocess.Popen(cmd, shell=True)
         self.store.update_status(pid, 'genesis_complete', True)
         self.root.after(2000, self.refresh_list)
