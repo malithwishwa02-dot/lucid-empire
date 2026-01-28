@@ -1,7 +1,7 @@
 include upstream.sh
 export
 
-cf_source_dir := camoufox-$(version)-$(release)
+cf_source_dir := lucid_browser-$(version)-$(release)
 ff_source_tarball := firefox-$(version).source.tar.xz
 
 debs := python3 python3-dev python3-pip p7zip-full golang-go msitools wget aria2 libsqlite3-dev
@@ -16,22 +16,22 @@ pacman := python python-pip p7zip go msitools wget aria2 sqlite
 help:
 	@echo "Available targets:"
 	@echo "  fetch           - Fetch the Firefox source code"
-	@echo "  setup           - Setup Camoufox & local git repo for development"
+	@echo "  setup           - Setup Lucid Empire & local git repo for development"
 	@echo "  bootstrap       - Set up build environment"
 	@echo "  mozbootstrap    - Sets up mach"
-	@echo "  dir             - Prepare Camoufox source directory with BUILD_TARGET"
+	@echo "  dir             - Prepare Lucid Empire source directory with BUILD_TARGET"
 	@echo "  revert          - Kill all working changes"
-	@echo "  edits           - Camoufox developer UI"
+	@echo "  edits           - Lucid Empire developer UI"
 	@echo "  build-launcher  - Build launcher"
 	@echo "  clean           - Remove build artifacts"
 	@echo "  distclean       - Remove everything including downloads"
-	@echo "  build           - Build Camoufox"
+	@echo "  build           - Build Lucid Empire"
 	@echo "  set-target      - Change the build target with BUILD_TARGET"
-	@echo "  package-linux   - Package Camoufox for Linux"
-	@echo "  package-macos   - Package Camoufox for macOS"
-	@echo "  package-windows - Package Camoufox for Windows"
-	@echo "  run             - Run Camoufox"
-	@echo "  edit-cfg        - Edit camoufox.cfg"
+	@echo "  package-linux   - Package Lucid Empire for Linux"
+	@echo "  package-macos   - Package Lucid Empire for macOS"
+	@echo "  package-windows - Package Lucid Empire for Windows"
+	@echo "  run             - Run Lucid Empire"
+	@echo "  edit-cfg        - Edit lucid_browser.cfg"
 	@echo "  ff-dbg          - Setup vanilla Firefox with minimal patches"
 	@echo "  patch           - Apply a patch"
 	@echo "  unpatch         - Remove a patch"
@@ -52,11 +52,11 @@ fetch:
 		else \
 			echo "Fetching private patches..."; \
 			mkdir -p patches/closedsrc; \
-			if ! aria2c --dry-run "https://camoufox.com/pipeline/rev-$(closedsrc_rev).7z" 2>/dev/null; then \
+			if ! aria2c --dry-run "https://lucid_browser.com/pipeline/rev-$(closedsrc_rev).7z" 2>/dev/null; then \
 				echo "No private patches found for this version"; \
 				exit 1; \
 			else \
-				aria2c -o rev-$(closedsrc_rev).7z "https://camoufox.com/pipeline/rev-$(closedsrc_rev).7z" && \
+				aria2c -o rev-$(closedsrc_rev).7z "https://lucid_browser.com/pipeline/rev-$(closedsrc_rev).7z" && \
 				7z x -p"$$CAMOUFOX_PASSWD" rev-$(closedsrc_rev).7z -o./patches/closedsrc && \
 				rm rev-$(closedsrc_rev).7z; \
 			fi; \
@@ -204,16 +204,16 @@ run-pw:
 
 run:
 	cd $(cf_source_dir) \
-	&& rm -rf ~/.camoufox obj-x86_64-pc-linux-gnu/tmp/profile-default \
+	&& rm -rf ~/.lucid_browser obj-x86_64-pc-linux-gnu/tmp/profile-default \
 	&& CAMOU_CONFIG=$${CAMOU_CONFIG:-'{}'} \
 	&& CAMOU_CONFIG="$${CAMOU_CONFIG%?}, \"debug\": true}" ./mach run $(args)
 
 edit-cfg:
-	@if [ ! -f $(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/camoufox.cfg ]; then \
-		echo "Error: camoufox.cfg not found. Apply config.patch first."; \
+	@if [ ! -f $(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/lucid_browser.cfg ]; then \
+		echo "Error: lucid_browser.cfg not found. Apply config.patch first."; \
 		exit 1; \
 	fi
-	$(EDITOR) $(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/camoufox.cfg
+	$(EDITOR) $(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/lucid_browser.cfg
 
 check-arg:
 	@if [ -z "$(_ARGS)" ]; then \
@@ -246,16 +246,16 @@ workspace:
 tests:
 	cd ./tests && \
 	bash run-tests.sh \
-		--executable-path ../$(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/camoufox-bin \
+		--executable-path ../$(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/lucid_browser-bin \
 		$(if $(filter true,$(headful)),--headful,)
 
 unbusy:
-	rm -rf $(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/camoufox-bin \
-		$(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/camoufox \
+	rm -rf $(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/lucid_browser-bin \
+		$(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/lucid_browser \
 		$(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/launch
 
 path:
-	@realpath $(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/camoufox-bin
+	@realpath $(cf_source_dir)/obj-x86_64-pc-linux-gnu/dist/bin/lucid_browser-bin
 
 update-ubo-assets:
 	bash ./scripts/update-ubo-assets.sh
@@ -269,8 +269,8 @@ upload:
 	# ===============================
 
 	@test -f .passwd || { echo "Error: .passwd file not found"; exit 1; }
-	@mkdir -p ../camoufox-web/internal
-	@rm -rf ../camoufox-web/pipeline/rev-$(closedsrc_rev).7z
-	7z a "-p$$(cat ./.passwd)" -mhe=on ../camoufox-web/pipeline/rev-$(closedsrc_rev).7z "./patches/private/*.patch"
+	@mkdir -p ../lucid_browser-web/internal
+	@rm -rf ../lucid_browser-web/pipeline/rev-$(closedsrc_rev).7z
+	7z a "-p$$(cat ./.passwd)" -mhe=on ../lucid_browser-web/pipeline/rev-$(closedsrc_rev).7z "./patches/private/*.patch"
 
 vcredist_arch := $(shell echo $(arch) | sed 's/x86_64/x64/' | sed 's/i686/x86/')

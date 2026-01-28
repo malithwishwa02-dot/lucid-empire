@@ -12,12 +12,12 @@
 ##
 ## Reference: https://www.mozilla.org/styleguide/communications/translation/
 
--brand-shorter-name = Camoufox
--brand-short-name = Camoufox
--brand-full-name = Camoufox
--brand-shortcut-name = Camoufox
+-brand-shorter-name = Lucid Empire
+-brand-short-name = Lucid Empire
+-brand-full-name = Lucid Empire
+-brand-shortcut-name = Lucid Empire
 # This brand name can be used in messages where the product name needs to
 # remain unchanged across different versions (Nightly, Beta, etc.).
--brand-product-name = Camoufox
--vendor-short-name = Camoufox
+-brand-product-name = Lucid Empire
+-vendor-short-name = Lucid Empire
 trademarkInfo = { " " }

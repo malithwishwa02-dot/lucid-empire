@@ -16,11 +16,11 @@ func getExecutableName() string {
 	// Get the executable name based on the OS
 	switch normalizeOS(runtime.GOOS) {
 	case "linux":
-		return getPath("camoufox-bin")
+		return getPath("lucid_browser-bin")
 	case "macos":
-		return getPath("Camoufox.app")
+		return getPath("Lucid Empire.app")
 	case "windows":
-		return getPath("camoufox.exe")
+		return getPath("lucid_browser.exe")
 	default:
 		// This should never be reached due to the check in normalizeOS
 		return ""
@@ -66,8 +66,8 @@ func filterOutput(r io.Reader, w io.Writer) {
 	}
 }
 
-// Run Camoufox
-func runCamoufox(execName string, args []string, addonsList []string, stderrPath string) {
+// Run Lucid Empire
+func runLucid Empire(execName string, args []string, addonsList []string, stderrPath string) {
 	// If addons are specified, get the debug port
 	var debugPortInt int
 	if len(addonsList) > 0 {

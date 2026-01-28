@@ -167,7 +167,7 @@ async def test_should_inherit_viewport_size_from_browser_context(
     await context.close()
 
 
-@pytest.mark.skip(reason="Not supported by Camoufox")
+@pytest.mark.skip(reason="Not supported by Lucid Empire")
 async def test_should_use_viewport_size_from_window_features(
     browser: Browser, server: Server
 ) -> None:

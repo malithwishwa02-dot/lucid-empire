@@ -58,13 +58,13 @@ func main() {
 
 	setEnvironmentVariables(configMap, userAgentOS)
 
-	// Run the Camoufox executable
+	// Run the Lucid Empire executable
 	execName := getExecutableName()
 	if err := setExecutablePermissions(execName); err != nil {
 		fmt.Printf("Error setting executable permissions: %v\n", err)
 		os.Exit(1)
 	}
-	runCamoufox(execName, args, addonsList, stderrPath)
+	runLucid Empire(execName, args, addonsList, stderrPath)
 }
 
 // Returns the absolute path relative to the launcher

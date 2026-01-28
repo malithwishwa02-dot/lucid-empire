@@ -1,7 +1,7 @@
 build:
-	podman build -t camoufox-benchmark .
+	podman build -t lucid_browser-benchmark .
 
 run:
-	podman run camoufox-benchmark --mode headless --browser firefox
-	podman run camoufox-benchmark --mode headless --browser camoufox
-	podman run camoufox-benchmark --mode headless --browser camoufox-ubo
+	podman run lucid_browser-benchmark --mode headless --browser firefox
+	podman run lucid_browser-benchmark --mode headless --browser lucid_browser
+	podman run lucid_browser-benchmark --mode headless --browser lucid_browser-ubo

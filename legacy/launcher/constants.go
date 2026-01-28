@@ -23,7 +23,7 @@ var ExclusionRules = []string{
 	"^console\\.error:\\ \\(\\{\\}\\)$",
 	"^console\\.error:\\ \"Could\\ not\\ record\\ event:\\ \"\\ \\(\\{\\}\\)$",
 	"^\\s*?$",
-	"Rejected by Camoufox\\.$",
+	"Rejected by Lucid Empire\\.$",
 	// Ignore missing urlbar provider errors
 	"^JavaScript\\ error:\\ resource:///modules/UrlbarProvider",
 }
