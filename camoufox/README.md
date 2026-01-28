@@ -519,4 +519,3 @@ Web scraping & testing:
 UI theming:
 
 - [Jamir-boop/minimalisticfox](https://github.com/Jamir-boop/minimalisticfox): Inspired Camoufox's minimal css theming [(link)](https://github.com/daijro/camoufox/blob/main/settings/chrome.css)
-=======
