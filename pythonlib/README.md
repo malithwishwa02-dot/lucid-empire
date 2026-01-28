@@ -1,19 +1,19 @@
 <div align="center">
 
-# Camoufox Python Interface
+# Lucid Empire Python Interface
 
-#### Lightweight wrapper around the Playwright API to help launch Camoufox.
+#### Lightweight wrapper around the Playwright API to help launch Lucid Empire.
 
 </div>
 
 > [!NOTE]
-> All the the latest documentation is avaliable [here](https://camoufox.com/python).
+> All the the latest documentation is avaliable [here](https://lucid_browser.com/python).
 
 ---
 
 ## What is this?
 
-This Python library wraps around Playwright's API to help automatically generate & inject unique device characteristics (OS, CPU info, navigator, fonts, headers, screen dimensions, viewport size, WebGL, addons, etc.) into Camoufox.
+This Python library wraps around Playwright's API to help automatically generate & inject unique device characteristics (OS, CPU info, navigator, fonts, headers, screen dimensions, viewport size, WebGL, addons, etc.) into Lucid Empire.
 
 It uses **Lucid Empire Golden Templates** to ensure deterministic identity replication, eliminating entropy leakage and providing cryptographic twins of real devices.
 
@@ -23,42 +23,42 @@ In addition, it will also calculate your target geolocation, timezone, and local
 
 ## Installation
 
-First, install the `camoufox` package:
+First, install the `lucid_browser` package:
 
 ```bash
-pip install -U camoufox[geoip]
+pip install -U lucid_browser[geoip]
 ```
 
 The `geoip` parameter is optional, but heavily recommended if you are using proxies. It will download an extra dataset to determine the user's longitude, latitude, timezone, country, & locale.
 
-Next, download the Camoufox browser:
+Next, download the Lucid Empire browser:
 
 **Windows**
 
 ```bash
-camoufox fetch
+lucid_browser fetch
 ```
 
 **MacOS & Linux**
 
 ```bash
-python3 -m camoufox fetch
+python3 -m lucid_browser fetch
 ```
 
-To uninstall, run `camoufox remove`.
+To uninstall, run `lucid_browser remove`.
 
 <details>
 <summary>CLI options</summary>
 
 ```
-Usage: python -m camoufox [OPTIONS] COMMAND [ARGS]...
+Usage: python -m lucid_browser [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --help  Show this message and exit.
 
 Commands:
-  fetch    Fetch the latest version of Camoufox
-  path     Display the path to the Camoufox executable
+  fetch    Fetch the latest version of Lucid Empire
+  path     Display the path to the Lucid Empire executable
   remove   Remove all downloaded files
   server   Launch a Playwright server
   test     Open the Playwright inspector
@@ -71,4 +71,4 @@ Commands:
 
 ## Usage
 
-All of the latest documentation is avaliable at [camoufox.com/python](https://camoufox.com/python).
+All of the latest documentation is avaliable at [lucid_browser.com/python](https://lucid_browser.com/python).

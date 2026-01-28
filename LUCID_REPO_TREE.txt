@@ -1,4 +1,4 @@
-camoufox-main/
+lucid_browser-main/
     AI-Assisted Repository Integration Plan.txt
     Anti-Detect Browser Development Plan.txt
     docker-compose.yml
@@ -29,7 +29,7 @@ camoufox-main/
                     aboutDialog.js
                     aboutDialog.xhtml
             branding/
-                camoufox/
+                lucid_browser/
                     Assets.car
                     background.png
                     branding.nsi
@@ -955,7 +955,7 @@ camoufox-main/
         publish.sh
         pyproject.toml
         README.md
-        camoufox/
+        lucid_browser/
             addons.py
             async_api.py
             exceptions.py
@@ -1008,7 +1008,7 @@ camoufox-main/
             webgl.html
     settings/
         camoucfg.jvv
-        camoufox.cfg
+        lucid_browser.cfg
         chrome.css
         properties.json
         defaults/
