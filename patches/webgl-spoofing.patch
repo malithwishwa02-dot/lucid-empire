@@ -6,7 +6,7 @@ index xxxxxxxxxx..yyyyyyyyyy 100644
  # Suppress warnings from third-party code.
  SOURCES["MurmurHash3.cpp"].flags += ["-Wno-implicit-fallthrough"]
 
-+LOCAL_INCLUDES += ["/camoucfg"]
++LOCAL_INCLUDES += ["/lucidcfg"]
 +
  LOCAL_INCLUDES += [
      "/js/xpconnect/wrappers",

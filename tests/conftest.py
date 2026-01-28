@@ -89,7 +89,7 @@ def launch_arguments(pytestconfig: pytest.Config, headless: bool) -> Dict:
         "headless": headless,
         "channel": pytestconfig.getoption("--browser-channel"),
     }
-    executable_path = os.getenv("CAMOUFOX_EXECUTABLE_PATH", None)
+    executable_path = os.getenv("LUCID_EXECUTABLE_PATH", None)
     if executable_path:
         args["executable_path"] = os.path.abspath(executable_path)
     return args

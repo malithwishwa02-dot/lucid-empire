@@ -46,7 +46,7 @@ while [ $i -le $# ]; do
                 exit 1
             fi
             if check_arg "--executable-path" "$1"; then
-                export CAMOUFOX_EXECUTABLE_PATH="$1"
+                export LUCID_EXECUTABLE_PATH="$1"
                 shift
             else
                 exit 1
@@ -69,8 +69,8 @@ done
 
 # Run pytest with validated arguments
 echo "Running pytest with arguments: ${VALID_ARGS[@]}"
-if [ -n "$CAMOUFOX_EXECUTABLE_PATH" ]; then
-    echo "CAMOUFOX_EXECUTABLE_PATH set to: $CAMOUFOX_EXECUTABLE_PATH"
+if [ -n "$LUCID_EXECUTABLE_PATH" ]; then
+    echo "LUCID_EXECUTABLE_PATH set to: $LUCID_EXECUTABLE_PATH"
 fi
 
 echo venv/bin/pytest -vv "${VALID_ARGS[@]}" async/

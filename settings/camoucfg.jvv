@@ -24,6 +24,9 @@
     "geolocation:accuracy": "double[>=0]",
     "timezone": "str[/^[\\w_]+/[\\w_]+$/]",
 
+    // Renamed camoucfg -> lucidcfg
+    // This file will remain named camoucfg.jvv for compatibility; A migration step will copy a new lucidcfg.jvv if desired.
+
     "locale:all": "str",
     "headers.Accept-Language": "str",
     "navigator.language": "str",

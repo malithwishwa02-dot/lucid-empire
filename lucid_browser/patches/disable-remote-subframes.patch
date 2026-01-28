@@ -31,5 +31,5 @@ index 3520e9d75a..0f73f2dd82 100644
  
  include("/tools/fuzzing/libfuzzer-config.mozbuild")
 +
-+LOCAL_INCLUDES += ['/camoucfg']
++LOCAL_INCLUDES += ['/lucidcfg']
 \ No newline at end of file

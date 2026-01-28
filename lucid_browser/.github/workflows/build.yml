@@ -86,7 +86,7 @@ jobs:
 
       - name: Fetch source
         env:
-          CAMOUFOX_PASSWD: ${{ secrets.CAMOUFOX_PASSWD }}
+          LUCID_PASSWD: ${{ secrets.LUCID_PASSWD }}
         run: |
           make fetch
 

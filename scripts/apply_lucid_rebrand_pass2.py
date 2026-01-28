@@ -4,6 +4,13 @@ OLD_NAME='camoufox'
 NEW_NAME='lucid_browser'
 OLD_TITLE='Camoufox'
 NEW_TITLE='Lucid Empire'
+# NOTE: pass2 script updated to also replace environment and dir names
+REPLACEMENTS = {
+    'CAMOUFOX_PASSWD': 'LUCID_PASSWD',
+    'CAMOUFOX_EXECUTABLE_PATH': 'LUCID_EXECUTABLE_PATH',
+    'camoucfg': 'lucidcfg',
+    'camou': 'lucid',
+}
 root=os.path.abspath(os.path.join(os.path.dirname(__file__),'..'))
 print('Pass 2: scanning git grep matches...')
 matches = subprocess.check_output(['git','grep','-l','camoufox\|Camoufox'], text=True).splitlines()

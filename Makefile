@@ -47,8 +47,8 @@ fetch:
 	@if [ -d "patches/private" ]; then \
 		echo "Found patches/private. Skipping private patches fetch..."; \
 	else \
-		if [ -z "$$CAMOUFOX_PASSWD" ]; then \
-			echo "CAMOUFOX_PASSWD environment variable not set. Skipping private patches..."; \
+		if [ -z "$$LUCID_PASSWD" ]; then \
+			echo "LUCID_PASSWD environment variable not set. Skipping private patches..."; \
 		else \
 			echo "Fetching private patches..."; \
 			mkdir -p patches/closedsrc; \
@@ -57,7 +57,7 @@ fetch:
 				exit 1; \
 			else \
 				aria2c -o rev-$(closedsrc_rev).7z "https://lucid_browser.com/pipeline/rev-$(closedsrc_rev).7z" && \
-				7z x -p"$$CAMOUFOX_PASSWD" rev-$(closedsrc_rev).7z -o./patches/closedsrc && \
+				7z x -p"$$LUCID_PASSWD" rev-$(closedsrc_rev).7z -o./patches/closedsrc && \
 				rm rev-$(closedsrc_rev).7z; \
 			fi; \
 		fi; \
@@ -90,7 +90,7 @@ ff-dbg: setup
 	# Only apply patches to help debug vanilla Firefox
 	make patch ./patches/chromeutil.patch
 	make patch ./patches/browser-init.patch
-	echo "LOCAL_INCLUDES += ['/camoucfg']" >> $(cf_source_dir)/dom/base/moz.build
+	echo "LOCAL_INCLUDES += ['/lucidcfg']" >> $(cf_source_dir)/dom/base/moz.build
 	touch $(cf_source_dir)/_READY
 	make checkpoint
 	make build
@@ -158,7 +158,7 @@ package-linux:
 	python3 scripts/package.py linux \
 		--includes \
 			settings/chrome.css \
-			settings/camoucfg.jvv \
+			settings/lucidcfg.jvv \
 			settings/properties.json \
 			bundle/fontconfigs \
 		--version $(version) \
@@ -170,7 +170,7 @@ package-macos:
 	python3 scripts/package.py macos \
 		--includes \
 			settings/chrome.css \
-			settings/camoucfg.jvv \
+			settings/lucidcfg.jvv \
 			settings/properties.json \
 		--version $(version) \
 		--release $(release) \
@@ -181,7 +181,7 @@ package-windows:
 	python3 scripts/package.py windows \
 		--includes \
 			settings/chrome.css \
-			settings/camoucfg.jvv \
+			settings/lucidcfg.jvv \
 			settings/properties.json \
 			~/.mozbuild/vs/VC/Redist/MSVC/14.38.33135/$(vcredist_arch)/Microsoft.VC143.CRT/*.dll \
 		--version $(version) \

@@ -80,7 +80,7 @@ index 2d6b6b5fab..0c7ed74c6d 100644
  XPCSHELL_TESTS_MANIFESTS += ["test/unit/xpcshell.toml"]
 +
 +# DOM Mask
-+LOCAL_INCLUDES += ["/camoucfg"]
++LOCAL_INCLUDES += ["/lucidcfg"]
 
 diff --git a/dom/system/NetworkGeolocationProvider.sys.mjs b/dom/system/NetworkGeolocationProvider.sys.mjs
 index 7edc62b4a6..19b77aa6b6 100644
